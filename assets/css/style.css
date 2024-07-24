@@ -222,12 +222,12 @@ html, body {
 .products p {
   font-family: 'SF Pro Display Ultra Light';
   font-size: 20px;
-  margin-bottom: 4rem;
   color: #474747;
 }
 
 .swiper-container {
   width: 100%;
+  height: 100%;
   padding-top: 20px;
   padding-bottom: 40px;
 }
@@ -241,6 +241,7 @@ html, body {
 .swiper-slide {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .product-card {
@@ -249,9 +250,12 @@ html, body {
   border-radius: 4px;
   padding: 2rem;
   text-align: left;
-  width: 100%; /* Ensure each card has a fixed width */
-  max-height: 350px;
-  height: 100%;
+  width: 100%;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .product-card span {
@@ -259,7 +263,7 @@ html, body {
   font-size: 18px;
   color: #538DFF;
   font-weight: bold;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -274,6 +278,7 @@ html, body {
   font-family: 'SF Pro Display Ultra Light';
   font-size: 16px;
   color: #474747;
+  margin-top: auto;
 }
 
 .swiper-pagination-bullet {
@@ -573,4 +578,23 @@ html, body {
   font-family: 'SF Pro Display Regular';
   font-size: 15px;
   padding: 2rem 2rem 0 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .product-card {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-card {
+    padding: 1rem;
+  }
 }
